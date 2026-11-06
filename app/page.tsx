@@ -1,5 +1,6 @@
 
 import AboutSection from "./about-section";
+import ProjectsSection from "./projects/_components/projects-section";
 
 export default function Home() {
   return (
@@ -98,6 +99,7 @@ export default function Home() {
       </div>
 
       <AboutSection />
+      <ProjectsSection />
     </main>
   );
 }
