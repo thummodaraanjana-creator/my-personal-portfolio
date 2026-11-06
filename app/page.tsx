@@ -1,69 +1,103 @@
-import Image from "next/image";
+
+import AboutSection from "./about-section";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <main className="min-h-screen bg-[#080b14] text-white overflow-hidden">
+
+      {/* Navigation */}
+      <nav className="flex items-center justify-between px-8 md:px-16 py-6">
+        <h1 className="text-2xl font-bold tracking-wider">
+          AN<span className="text-cyan-400">.</span>
+        </h1>
+
+        <div className="hidden md:flex gap-8 text-gray-300">
+          <a href="#home" className="hover:text-cyan-400">Home</a>
+          <a href="#about" className="hover:text-cyan-400">About</a>
+          <a href="#projects" className="hover:text-cyan-400">Projects</a>
+          <a href="#contact" className="hover:text-cyan-400">Contact</a>
+        </div>
+
+        <a
+          href="#contact"
+          className="rounded-full border border-cyan-400 px-5 py-2 text-cyan-400 hover:bg-cyan-400 hover:text-black transition"
+        >
+          Let&apos;s Talk
+        </a>
+      </nav>
+
+      {/* Hero Section */}
+      <section
+        id="home"
+        className="relative min-h-[85vh] flex flex-col md:flex-row items-center justify-center px-8 md:px-16 gap-12"
+      >
+
+        {/* Introduction */}
+        <div className="z-10 flex-1">
+          <p className="text-cyan-400 tracking-[0.3em] uppercase text-sm mb-5">
+            Hello, I&apos;m
           </p>
+
+          <h1 className="text-5xl md:text-7xl font-bold leading-tight">
+            Anjana
+            <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">
+              Thummodara
+            </span>
+          </h1>
+
+          <h2 className="text-xl md:text-2xl text-gray-300 mt-6">
+            Aspiring Software Developer
+          </h2>
+
+          <p className="text-gray-400 max-w-lg mt-5 leading-7">
+            I&apos;m an IT undergraduate passionate about technology,
+            software development and building creative digital solutions.
+            Welcome to my personal portfolio.
+          </p>
+
+          <div className="flex flex-wrap gap-4 mt-8">
+            <a
+              href="#projects"
+              className="bg-cyan-400 text-black font-semibold px-7 py-3 rounded-full hover:bg-cyan-300 transition"
+            >
+              Explore My Work &rarr;
+            </a>
+
+            <a
+              href="#about"
+              className="border border-gray-500 px-7 py-3 rounded-full hover:border-cyan-400 hover:text-cyan-400 transition"
+            >
+              About Me
+            </a>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+        {/* Interactive Visual */}
+        <div className="flex-1 flex justify-center items-center">
+          <div className="relative w-64 h-64 md:w-96 md:h-96 flex items-center justify-center">
+
+            <div className="absolute inset-0 rounded-full border border-cyan-400/30 animate-[spin_15s_linear_infinite]" />
+
+            <div className="absolute inset-8 rounded-full border border-blue-500/40 animate-[spin_10s_linear_infinite_reverse]" />
+
+            <div className="w-48 h-48 md:w-64 md:h-64 rounded-full bg-gradient-to-br from-cyan-400 via-blue-600 to-purple-700 blur-[2px] shadow-[0_0_100px_rgba(34,211,238,0.35)] animate-pulse" />
+
+            <div className="absolute text-white text-5xl font-bold">
+              AN
+            </div>
+
+          </div>
         </div>
-      </main>
-    </div>
+
+      </section>
+
+      {/* Bottom Indicator */}
+      <div className="text-center text-gray-500 pb-8 text-sm tracking-widest">
+        SCROLL TO EXPLORE ↓
+      </div>
+
+      <AboutSection />
+    </main>
   );
 }
