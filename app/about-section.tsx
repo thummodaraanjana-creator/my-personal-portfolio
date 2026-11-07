@@ -70,15 +70,15 @@ export default function AboutSection() {
       ref={sectionRef}
       id="about"
       aria-labelledby="about-heading"
-      className="relative isolate overflow-hidden border-t border-white/[0.06] bg-[#080b14] px-6 py-24 sm:px-10 md:px-16 md:py-32"
+      className="relative isolate overflow-hidden border-t border-subtle-border/70 bg-obsidian px-6 py-24 sm:px-10 md:px-16 md:py-32"
     >
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute -left-40 top-12 -z-10 h-80 w-80 rounded-full bg-cyan-500/[0.08] blur-[110px]"
+        className="pointer-events-none absolute -left-40 top-12 -z-10 h-80 w-80 rounded-full bg-accent/[0.07] blur-[110px]"
       />
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute -right-36 bottom-0 -z-10 h-96 w-96 rounded-full bg-blue-600/[0.10] blur-[120px]"
+        className="pointer-events-none absolute -right-36 bottom-0 -z-10 h-96 w-96 rounded-full bg-accent/[0.035] blur-[120px]"
       />
 
       <div
@@ -87,28 +87,28 @@ export default function AboutSection() {
         }`}
       >
         <div>
-          <p className="mb-5 flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.28em] text-cyan-300">
-            <span className="h-px w-8 bg-gradient-to-r from-cyan-400 to-blue-500" />
+          <p className="mb-5 flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.28em] text-accent">
+            <span className="h-px w-8 bg-gradient-to-r from-accent to-accent-hover" />
             A little about me
           </p>
 
           <h2
             id="about-heading"
-            className="text-4xl font-bold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl"
+            className="text-4xl font-bold leading-tight tracking-[-0.04em] text-ivory sm:text-5xl lg:text-6xl"
           >
             About Me
-            <span className="mt-2 block bg-gradient-to-r from-cyan-300 via-sky-400 to-blue-500 bg-clip-text text-transparent">
+            <span className="mt-2 block bg-gradient-to-r from-accent to-accent-hover bg-clip-text text-transparent">
               Curious by nature.
               <br className="hidden sm:block" /> Driven by code.
             </span>
           </h2>
 
-          <p className="mt-7 max-w-xl text-base leading-8 text-slate-300 sm:text-lg">
-            I&apos;m <span className="font-semibold text-white">Anjana Thummodara</span>,
+          <p className="mt-7 max-w-xl text-base leading-8 text-ivory/90 sm:text-lg">
+            I&apos;m <span className="font-semibold text-ivory">Anjana Thummodara</span>,
             an IT undergraduate at the Faculty of Information Technology,
             University of Moratuwa, and an aspiring software developer.
           </p>
-          <p className="mt-4 max-w-xl leading-8 text-slate-400">
+          <p className="mt-4 max-w-xl leading-8 text-secondary">
             I&apos;m drawn to software engineering, frontend and backend
             development, and the problem-solving that brings an idea to life.
             My goal is to become a skilled software engineer and build useful
@@ -118,7 +118,7 @@ export default function AboutSection() {
           <div className="mt-9 flex flex-wrap items-center gap-4">
             <a
               href="#projects"
-              className="group inline-flex items-center gap-3 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 px-6 py-3.5 text-sm font-semibold text-[#06101b] shadow-[0_8px_30px_rgba(34,211,238,0.18)] transition duration-300 hover:-translate-y-0.5 hover:shadow-[0_12px_36px_rgba(34,211,238,0.3)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-300"
+              className="group inline-flex items-center gap-3 rounded-full bg-gradient-to-r from-accent to-accent-hover px-6 py-3.5 text-sm font-semibold text-obsidian shadow-[0_8px_30px_rgba(255,96,69,0.16)] transition duration-300 hover:-translate-y-0.5 hover:shadow-[0_12px_36px_rgba(255,96,69,0.25)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent-hover"
             >
               Explore my projects
               <span
@@ -128,7 +128,7 @@ export default function AboutSection() {
                 &rarr;
               </span>
             </a>
-            <span className="text-xs tracking-wide text-slate-500">
+            <span className="text-xs tracking-wide text-secondary/70">
               Learning, exploring, building
             </span>
           </div>
@@ -143,57 +143,57 @@ export default function AboutSection() {
         >
           <div
             aria-hidden="true"
-            className="absolute -inset-4 rounded-[2rem] bg-gradient-to-br from-cyan-400/10 via-transparent to-blue-500/10 blur-2xl"
+            className="absolute -inset-4 rounded-[2rem] bg-gradient-to-br from-accent/10 via-transparent to-accent-hover/5 blur-2xl"
           />
 
-          <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-slate-900/55 p-6 shadow-[0_24px_90px_rgba(0,0,0,0.38)] backdrop-blur-xl sm:p-8">
+          <div className="relative overflow-hidden rounded-3xl border border-subtle-border/80 bg-graphite/80 p-6 shadow-[0_24px_90px_rgba(0,0,0,0.38)] backdrop-blur-xl sm:p-8">
             <div
               aria-hidden="true"
-              className="absolute inset-0 bg-[radial-gradient(circle_at_85%_12%,rgba(34,211,238,0.10),transparent_32%),linear-gradient(135deg,rgba(255,255,255,0.035),transparent_55%)]"
+              className="absolute inset-0 bg-[radial-gradient(circle_at_85%_12%,rgba(255,96,69,0.08),transparent_32%),linear-gradient(135deg,rgba(244,240,232,0.035),transparent_55%)]"
             />
 
             <div className="relative">
-              <div className="flex items-center justify-between border-b border-white/[0.08] pb-5">
+              <div className="flex items-center justify-between border-b border-subtle-border/70 pb-5">
                 <div className="flex items-center gap-3">
-                  <span className="flex h-10 w-10 items-center justify-center rounded-xl border border-cyan-300/20 bg-cyan-300/[0.08] font-mono text-sm font-semibold text-cyan-200">
+                  <span className="flex h-10 w-10 items-center justify-center rounded-xl border border-accent/25 bg-accent/[0.08] font-mono text-sm font-semibold text-accent-hover">
                     AT
                   </span>
                   <div>
-                    <p className="text-sm font-semibold text-white">
+                    <p className="text-sm font-semibold text-ivory">
                       Personal profile
                     </p>
-                    <p className="mt-0.5 font-mono text-[10px] uppercase tracking-[0.2em] text-slate-500">
+                    <p className="mt-0.5 font-mono text-[10px] uppercase tracking-[0.2em] text-secondary/70">
                       Developer in progress
                     </p>
                   </div>
                 </div>
                 <span
                   aria-hidden="true"
-                  className="h-2 w-2 rounded-full bg-cyan-300 shadow-[0_0_12px_rgba(103,232,249,0.8)]"
+                  className="h-2 w-2 rounded-full bg-accent shadow-[0_0_12px_rgba(255,96,69,0.65)]"
                 />
               </div>
 
-              <div className="mt-6 grid grid-cols-[auto_1fr] items-center gap-5 rounded-2xl border border-white/[0.07] bg-[#080b14]/55 p-4 sm:gap-6 sm:p-5">
+              <div className="mt-6 grid grid-cols-[auto_1fr] items-center gap-5 rounded-2xl border border-subtle-border/60 bg-obsidian/70 p-4 sm:gap-6 sm:p-5">
                 <div
                   aria-hidden="true"
                   className="relative flex h-20 w-20 items-center justify-center sm:h-24 sm:w-24"
                 >
-                  <span className="absolute inset-0 rounded-full border border-cyan-300/25" />
-                  <span className="absolute inset-2 rounded-full border border-blue-400/30 [animation:spin_18s_linear_infinite]" />
-                  <span className="absolute inset-4 rounded-full bg-gradient-to-br from-cyan-400/25 to-blue-600/25 blur-md" />
-                  <span className="relative font-mono text-xl font-bold text-cyan-100 sm:text-2xl">
+                  <span className="absolute inset-0 rounded-full border border-accent/25" />
+                  <span className="absolute inset-2 rounded-full border border-subtle-border [animation:spin_18s_linear_infinite]" />
+                  <span className="absolute inset-4 rounded-full bg-gradient-to-br from-accent/25 to-accent-hover/15 blur-md" />
+                  <span className="relative font-mono text-xl font-bold text-ivory sm:text-2xl">
                     &lt;/&gt;
                   </span>
-                  <span className="absolute right-0 top-3 h-1.5 w-1.5 rounded-full bg-cyan-200 shadow-[0_0_10px_rgba(165,243,252,0.9)]" />
+                  <span className="absolute right-0 top-3 h-1.5 w-1.5 rounded-full bg-accent-hover shadow-[0_0_10px_rgba(255,128,107,0.7)]" />
                 </div>
                 <div className="min-w-0">
-                  <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-cyan-300/80">
+                  <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-accent">
                     Career interest
                   </p>
-                  <p className="mt-2 text-lg font-semibold text-white sm:text-xl">
+                  <p className="mt-2 text-lg font-semibold text-ivory sm:text-xl">
                     Aspiring Software Developer
                   </p>
-                  <p className="mt-1 text-xs leading-5 text-slate-400">
+                  <p className="mt-1 text-xs leading-5 text-secondary">
                     Building toward useful, real-world applications
                   </p>
                 </div>
@@ -201,10 +201,10 @@ export default function AboutSection() {
 
               <div className="mt-6">
                 <div className="mb-3 flex items-center justify-between gap-4">
-                  <h3 className="text-sm font-semibold text-white">
+                  <h3 className="text-sm font-semibold text-ivory">
                     Areas I&apos;m drawn to
                   </h3>
-                  <span className="font-mono text-[10px] text-slate-500">
+                  <span className="font-mono text-[10px] text-secondary/70">
                     SELECT A FOCUS
                   </span>
                 </div>
@@ -218,10 +218,10 @@ export default function AboutSection() {
                         type="button"
                         aria-pressed={isActive}
                         onClick={() => setActiveInterest(index)}
-                        className={`rounded-full border px-3 py-2 text-xs transition duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-300 ${
+                        className={`rounded-full border px-3 py-2 text-xs transition duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent ${
                           isActive
-                            ? "border-cyan-300/50 bg-cyan-300/10 text-cyan-100 shadow-[0_0_18px_rgba(34,211,238,0.10)]"
-                            : "border-white/10 bg-white/[0.03] text-slate-400 hover:border-cyan-300/30 hover:text-slate-200"
+                            ? "border-accent/50 bg-accent/10 text-accent-hover shadow-[0_0_18px_rgba(255,96,69,0.10)]"
+                            : "border-subtle-border bg-obsidian/40 text-secondary hover:border-accent/40 hover:text-ivory"
                         }`}
                       >
                         {interest.name}
@@ -232,40 +232,40 @@ export default function AboutSection() {
 
                 <div
                   aria-live="polite"
-                  className="mt-4 flex min-h-20 items-start gap-4 rounded-xl border border-white/[0.06] bg-white/[0.025] p-4"
+                  className="mt-4 flex min-h-20 items-start gap-4 rounded-xl border border-subtle-border/70 bg-obsidian/45 p-4"
                 >
                   <span
                     aria-hidden="true"
-                    className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-cyan-400/15 to-blue-500/15 font-mono text-xs font-semibold text-cyan-200"
+                    className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-accent/15 to-accent-hover/10 font-mono text-xs font-semibold text-accent-hover"
                   >
                     {interests[activeInterest].symbol}
                   </span>
                   <div>
-                    <p className="text-xs font-semibold text-slate-200">
+                    <p className="text-xs font-semibold text-ivory">
                       {interests[activeInterest].name}
                     </p>
-                    <p className="mt-1 text-xs leading-5 text-slate-400">
+                    <p className="mt-1 text-xs leading-5 text-secondary">
                       {interests[activeInterest].detail}
                     </p>
                   </div>
                 </div>
               </div>
 
-              <div className="mt-6 flex items-start gap-3 border-t border-white/[0.08] pt-5">
+              <div className="mt-6 flex items-start gap-3 border-t border-subtle-border/70 pt-5">
                 <span
                   aria-hidden="true"
-                  className="mt-0.5 text-sm text-cyan-300"
+                  className="mt-0.5 text-sm text-accent"
                 >
                   &#9670;
                 </span>
                 <div>
-                  <p className="text-xs font-semibold text-white">Education</p>
-                  <p className="mt-1 text-xs leading-5 text-slate-400">
+                  <p className="text-xs font-semibold text-ivory">Education</p>
+                  <p className="mt-1 text-xs leading-5 text-secondary">
                     IT Undergraduate
-                    <span className="mx-1.5 text-slate-600">&middot;</span>
+                    <span className="mx-1.5 text-secondary/60">&middot;</span>
                     University of Moratuwa
                   </p>
-                  <p className="text-xs leading-5 text-slate-500">
+                  <p className="text-xs leading-5 text-secondary/75">
                     Faculty of Information Technology
                   </p>
                 </div>
