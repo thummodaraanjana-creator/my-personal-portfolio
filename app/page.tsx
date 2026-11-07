@@ -1,6 +1,7 @@
 
 import AboutSection from "./about-section";
 import ProjectsSection from "./projects/_components/projects-section";
+import HeroCallMe from "./hero-call-me";
 
 export default function Home() {
   return (
@@ -76,19 +77,7 @@ export default function Home() {
 
         {/* Interactive Visual */}
         <div className="flex-1 flex justify-center items-center">
-          <div className="relative w-64 h-64 md:w-96 md:h-96 flex items-center justify-center">
-
-            <div className="absolute inset-0 rounded-full border border-cyan-400/30 animate-[spin_15s_linear_infinite]" />
-
-            <div className="absolute inset-8 rounded-full border border-blue-500/40 animate-[spin_10s_linear_infinite_reverse]" />
-
-            <div className="w-48 h-48 md:w-64 md:h-64 rounded-full bg-gradient-to-br from-cyan-400 via-blue-600 to-purple-700 blur-[2px] shadow-[0_0_100px_rgba(34,211,238,0.35)] animate-pulse" />
-
-            <div className="absolute text-white text-5xl font-bold">
-              AN
-            </div>
-
-          </div>
+          <HeroCallMe />
         </div>
 
       </section>
