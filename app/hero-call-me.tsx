@@ -106,11 +106,11 @@ export default function HeroCallMe() {
       <div className="relative flex h-64 w-64 items-center justify-center md:h-96 md:w-96">
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute inset-0 rounded-full border border-accent/35 animate-[spin_15s_linear_infinite]"
+          className="pointer-events-none absolute inset-0 rounded-full border border-cyan-400/30 animate-[spin_15s_linear_infinite]"
         />
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute inset-8 rounded-full border border-subtle-border animate-[spin_10s_linear_infinite_reverse]"
+          className="pointer-events-none absolute inset-8 rounded-full border border-blue-500/40 animate-[spin_10s_linear_infinite_reverse]"
         />
 
         <button
@@ -124,7 +124,7 @@ export default function HeroCallMe() {
         >
           <span
             aria-hidden="true"
-            className="pointer-events-none absolute inset-0 rounded-full bg-gradient-to-br from-accent to-accent-hover blur-[2px] shadow-[0_0_90px_rgba(255,96,69,0.25)] transition-shadow duration-300 group-hover:shadow-[0_0_110px_rgba(255,96,69,0.38)] animate-pulse"
+            className="pointer-events-none absolute inset-0 rounded-full bg-gradient-to-br from-cyan-400 via-blue-600 to-purple-700 blur-[2px] shadow-[0_0_100px_rgba(34,211,238,0.35)] transition-shadow duration-300 group-hover:shadow-[0_0_120px_rgba(34,211,238,0.55)] group-hover:shadow-blue-500/30 animate-pulse"
           />
           <span className="relative text-5xl font-bold text-ivory">AN</span>
         </button>
@@ -143,7 +143,7 @@ export default function HeroCallMe() {
           >
             <div
               aria-hidden="true"
-              className="pointer-events-none absolute inset-0 bg-obsidian/85 backdrop-blur-md"
+              className="pointer-events-none absolute inset-0 bg-slate-950/80 backdrop-blur-md"
             />
 
             <section
@@ -153,7 +153,7 @@ export default function HeroCallMe() {
               aria-labelledby="call-me-title"
               aria-describedby="call-me-description"
               onKeyDown={handleDialogKeyDown}
-              className={`relative z-10 w-full max-w-md overflow-hidden rounded-3xl border border-subtle-border bg-graphite/95 p-7 shadow-[0_24px_100px_rgba(0,0,0,0.65),0_0_60px_rgba(255,96,69,0.08)] backdrop-blur-2xl transition duration-200 ease-out motion-reduce:transition-none sm:p-9 ${
+              className={`relative z-10 w-full max-w-md overflow-hidden rounded-3xl border border-cyan-200/15 bg-[#0b1220]/95 p-7 shadow-[0_24px_100px_rgba(0,0,0,0.65),0_0_60px_rgba(34,211,238,0.10)] backdrop-blur-2xl transition duration-200 ease-out motion-reduce:transition-none sm:p-9 ${
                 isOpen
                   ? "translate-y-0 scale-100 opacity-100"
                   : "translate-y-3 scale-[0.97] opacity-0"
@@ -169,7 +169,7 @@ export default function HeroCallMe() {
                 type="button"
                 aria-label="Close call details"
                 onClick={closeModal}
-                className="absolute right-4 top-4 z-10 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border border-subtle-border bg-obsidian/45 text-secondary transition hover:border-accent/50 hover:bg-accent/[0.08] hover:text-ivory focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+                className="absolute right-4 top-4 z-10 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border border-white/10 bg-white/[0.04] text-slate-400 transition hover:border-cyan-200/30 hover:bg-cyan-200/[0.08] hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-300"
               >
                 <svg
                   aria-hidden="true"
@@ -187,7 +187,7 @@ export default function HeroCallMe() {
               </button>
 
               <div className="relative">
-                <span className="inline-flex h-14 w-14 items-center justify-center rounded-2xl border border-accent/25 bg-gradient-to-br from-accent/15 to-accent-hover/[0.07] text-accent-hover shadow-[0_0_30px_rgba(255,96,69,0.10)]">
+                <span className="inline-flex h-14 w-14 items-center justify-center rounded-2xl border border-cyan-200/20 bg-gradient-to-br from-cyan-300/15 to-blue-500/10 text-cyan-200 shadow-[0_0_30px_rgba(34,211,238,0.12)]">
                   <svg
                     aria-hidden="true"
                     viewBox="0 0 24 24"
@@ -220,14 +220,14 @@ export default function HeroCallMe() {
                   I&apos;d love to hear from you. Feel free to give me a call.
                 </p>
 
-                <div className="mt-7 rounded-2xl border border-subtle-border bg-obsidian/45 p-4 sm:p-5">
+                <div className="mt-7 rounded-2xl border border-white/[0.08] bg-white/[0.035] p-4 sm:p-5">
                   <p className="text-sm font-semibold text-ivory">
                     Anjana Thummodara
                   </p>
-                  <p className="mt-1 font-mono text-sm tracking-wide text-ivory/80">
+                  <p className="mt-1 font-mono text-sm tracking-wide text-slate-300">
                     {CONTACT_PHONE_NUMBER}
                   </p>
-                  <p className="mt-2 text-[11px] leading-5 text-secondary/75">
+                  <p className="mt-2 text-[11px] leading-5 text-slate-500">
                     Replace the placeholder with your phone number in
                     international format.
                   </p>
@@ -235,7 +235,7 @@ export default function HeroCallMe() {
 
                 <a
                   href={`tel:${CONTACT_PHONE_NUMBER}`}
-                  className="group mt-5 inline-flex w-full items-center justify-center gap-2.5 rounded-xl bg-gradient-to-r from-accent to-accent-hover px-5 py-3.5 text-sm font-bold text-obsidian shadow-[0_8px_30px_rgba(255,96,69,0.16)] transition duration-200 hover:-translate-y-0.5 hover:shadow-[0_12px_34px_rgba(255,96,69,0.25)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent"
+                  className="group mt-5 inline-flex w-full items-center justify-center gap-2.5 rounded-xl bg-gradient-to-r from-cyan-300 to-blue-500 px-5 py-3.5 text-sm font-bold text-[#07111c] shadow-[0_8px_30px_rgba(34,211,238,0.18)] transition duration-200 hover:-translate-y-0.5 hover:shadow-[0_12px_34px_rgba(34,211,238,0.30)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-200"
                 >
                   <svg
                     aria-hidden="true"

@@ -1,13 +1,13 @@
 @import "tailwindcss";
 
 :root {
-  --obsidian: #171717;
-  --graphite: #292929;
-  --warm-ivory: #f4f0e8;
-  --secondary-text: #a3a3a3;
-  --electric-coral: #ff6045;
-  --coral-hover: #ff806b;
-  --subtle-border: #404040;
+  --obsidian: #080b14;
+  --graphite: #0b1220;
+  --warm-ivory: #ffffff;
+  --secondary-text: #94a3b8;
+  --cyan-accent: #22d3ee;
+  --cyan-hover: #67e8f9;
+  --subtle-border: rgba(255, 255, 255, 0.08);
   color-scheme: dark;
 }
 
@@ -18,8 +18,8 @@
   --color-graphite: var(--graphite);
   --color-ivory: var(--warm-ivory);
   --color-secondary: var(--secondary-text);
-  --color-accent: var(--electric-coral);
-  --color-accent-hover: var(--coral-hover);
+  --color-accent: var(--cyan-accent);
+  --color-accent-hover: var(--cyan-hover);
   --color-subtle-border: var(--subtle-border);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
@@ -39,7 +39,7 @@ body {
 }
 
 ::selection {
-  background: var(--electric-coral);
+  background: var(--cyan-accent);
   color: var(--obsidian);
 }
 
