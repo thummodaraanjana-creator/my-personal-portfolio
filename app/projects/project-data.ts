@@ -61,17 +61,17 @@ export const projects: PortfolioProject[] = [
     slug: "space-shooter",
     title: "Space Shooter 2D",
     category: "Game Development",
-    status: "In Progress",
+    status: "Completed",
     description:
-      "A 2D Space Shooter game currently in development, built while exploring player controls and core gameplay interactions.",
+      "A completed 2D Space Shooter game developed using Unity and C#, featuring player movement, laser shooting, and interactive gameplay.",
     technologies: ["Unity", "C#", "Visual Studio"],
     artwork: "space-shooter",
     overview:
-      "Space Shooter 2D is an in-progress game development project. I am building it with Unity and C#, practicing how player input and game objects work together.",
+      "Space Shooter 2D is a completed game development project built using Unity and C#. Through this project, I explored core game development concepts and implemented interactive gameplay mechanics.",
     problem:
       "This is a personal learning project rather than a solution to a stated external problem. It gives me a place to practice interactive 2D game development.",
     objective:
-      "Continue developing a 2D space shooter while learning Unity workflows, movement controls, and game-object interactions.",
+      "Develop a fully playable 2D space shooter while learning Unity workflows, player controls, and game-object interactions.",
     contributions: [
       "Implemented player movement.",
       "Developed laser shooting mechanics.",
