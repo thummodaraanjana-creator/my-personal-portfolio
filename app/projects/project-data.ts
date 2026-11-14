@@ -1,5 +1,9 @@
 export type ProjectStatus = "Completed" | "In Progress";
-export type ProjectArtworkType = "microgreen" | "space-shooter" | "business-guidance";
+export type ProjectArtworkType =
+  | "microgreen"
+  | "space-shooter"
+  | "business-guidance"
+  | "breakout";
 
 export interface ProjectFeatureGroup {
   title: string;
@@ -145,5 +149,44 @@ export const projects: PortfolioProject[] = [
       "System diagrams",
     ],
     hasRepositoryPlaceholder: true,
+  },
+  {
+    slug: "breakout",
+    title: "Breakout",
+    category: "Game Development",
+    status: "In Progress",
+    description:
+      "A 2D arcade-style Breakout game currently under development using Unity and C#. Inspired by classic brick-breaking arcade games, the project focuses on implementing interactive gameplay mechanics.",
+    technologies: ["Unity 2D", "C#", "Visual Studio"],
+    artwork: "breakout",
+    overview:
+      "Breakout is a personal game development project inspired by classic Arkanoid and Breakout games. I am developing it using Unity and C#, exploring 2D physics, player controls, collision detection, and gameplay mechanics.",
+    problem:
+      "This is a personal learning project focused on understanding and practising 2D game development concepts using Unity.",
+    objective:
+      "Develop a playable 2D Breakout game while improving my knowledge of Unity game development, physics, collision detection, and gameplay programming.",
+    contributions: [
+      "Created and configured the Unity 2D project.",
+      "Imported and organized game assets.",
+      "Set up the game environment.",
+      "Started implementing player controls and paddle movement.",
+      "Working towards implementing ball movement and bouncing mechanics.",
+      "Planning brick destruction and core gameplay interactions.",
+    ],
+    featureGroups: [
+      {
+        title: "Development Progress",
+        items: [
+          "Unity 2D project setup",
+          "Game asset integration",
+          "Player and paddle controller development",
+          "Core gameplay mechanics under development",
+        ],
+      },
+    ],
+    mediaHeading: "Gameplay Screenshots",
+    mediaDescription:
+      "Gameplay screenshots and development progress will be added as the game continues to develop.",
+    mediaItems: ["Game environment", "Player paddle", "Gameplay progress"],
   },
 ];

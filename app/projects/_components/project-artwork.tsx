@@ -86,6 +86,46 @@ function SpaceShooterArtwork() {
   );
 }
 
+function BreakoutArtwork() {
+  return (
+    <svg
+      aria-hidden="true"
+      viewBox="0 0 640 360"
+      className="h-full w-full"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <defs>
+        <linearGradient id="breakout-bg" x1="66" y1="0" x2="578" y2="360">
+          <stop stopColor="#25143B" />
+          <stop offset="1" stopColor="#090D1A" />
+        </linearGradient>
+        <linearGradient id="breakout-ball" x1="298" y1="241" x2="328" y2="271">
+          <stop stopColor="#FDE68A" />
+          <stop offset="1" stopColor="#F97316" />
+        </linearGradient>
+      </defs>
+      <rect width="640" height="360" fill="url(#breakout-bg)" />
+      <circle cx="502" cy="82" r="115" fill="#A855F7" fillOpacity=".1" />
+      <rect x="113" y="41" width="414" height="278" rx="18" fill="#0B1422" stroke="#C4B5FD" strokeOpacity=".2" />
+      <path d="M113 82H527" stroke="#C4B5FD" strokeOpacity=".12" />
+      <rect x="153" y="105" width="96" height="25" rx="7" fill="#F472B6" fillOpacity=".85" />
+      <rect x="263" y="105" width="96" height="25" rx="7" fill="#A78BFA" fillOpacity=".9" />
+      <rect x="373" y="105" width="96" height="25" rx="7" fill="#67E8F9" fillOpacity=".85" />
+      <rect x="153" y="140" width="96" height="25" rx="7" fill="#FB7185" fillOpacity=".8" />
+      <rect x="263" y="140" width="96" height="25" rx="7" fill="#818CF8" fillOpacity=".85" />
+      <rect x="373" y="140" width="96" height="25" rx="7" fill="#34D399" fillOpacity=".8" />
+      <rect x="153" y="175" width="96" height="25" rx="7" fill="#FBBF24" fillOpacity=".8" />
+      <rect x="263" y="175" width="96" height="25" rx="7" fill="#F472B6" fillOpacity=".8" />
+      <rect x="373" y="175" width="96" height="25" rx="7" fill="#A78BFA" fillOpacity=".85" />
+      <path d="M319 234L344 209" stroke="#FDE68A" strokeOpacity=".5" strokeWidth="2" strokeLinecap="round" />
+      <circle cx="319" cy="242" r="8" fill="url(#breakout-ball)" />
+      <rect x="263" y="273" width="114" height="12" rx="6" fill="#67E8F9" />
+      <path d="M147 299H493" stroke="#67E8F9" strokeOpacity=".16" />
+    </svg>
+  );
+}
+
 function BusinessGuidanceArtwork() {
   return (
     <svg
@@ -142,6 +182,7 @@ export default function ProjectArtwork({ type, title }: ProjectArtworkProps) {
       <div className="absolute inset-0 transition-transform duration-500 group-hover:scale-[1.03]">
         {type === "microgreen" && <MicrogreenArtwork />}
         {type === "space-shooter" && <SpaceShooterArtwork />}
+        {type === "breakout" && <BreakoutArtwork />}
         {type === "business-guidance" && <BusinessGuidanceArtwork />}
       </div>
       <div
