@@ -122,11 +122,11 @@ export default function HeroCallMe() {
           onClick={openModal}
           className="group relative z-10 flex h-48 w-48 cursor-pointer items-center justify-center rounded-full border-0 bg-transparent p-0 transition-transform duration-300 hover:scale-[1.03] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-8 focus-visible:outline-accent-hover motion-reduce:transition-none md:h-64 md:w-64"
         >
-          <span
-            aria-hidden="true"
-            className="pointer-events-none absolute inset-0 rounded-full bg-gradient-to-br from-cyan-400 via-blue-600 to-purple-700 blur-[2px] shadow-[0_0_100px_rgba(34,211,238,0.35)] transition-shadow duration-300 group-hover:shadow-[0_0_120px_rgba(34,211,238,0.55)] group-hover:shadow-blue-500/30 animate-pulse"
+          <img
+            src="/images/profile.jpg"
+            alt="Anjana Thummodara"
+            className="relative z-10 h-full w-full rounded-full object-cover shadow-[0_0_100px_rgba(34,211,238,0.35)] transition-shadow duration-300 group-hover:shadow-[0_0_120px_rgba(34,211,238,0.55)] group-hover:shadow-blue-500/30 animate-pulse"
           />
-          <span className="relative text-5xl font-bold text-ivory">AN</span>
         </button>
       </div>
 
@@ -134,9 +134,8 @@ export default function HeroCallMe() {
         typeof document !== "undefined" &&
         createPortal(
           <div
-            className={`fixed inset-0 z-[100] flex items-center justify-center overflow-y-auto p-4 transition-opacity duration-200 motion-reduce:transition-none sm:p-6 ${
-              isOpen ? "opacity-100" : "opacity-0"
-            }`}
+            className={`fixed inset-0 z-[100] flex items-center justify-center overflow-y-auto p-4 transition-opacity duration-200 motion-reduce:transition-none sm:p-6 ${isOpen ? "opacity-100" : "opacity-0"
+              }`}
             onClick={(event) => {
               if (event.target === event.currentTarget) closeModal();
             }}
@@ -153,11 +152,10 @@ export default function HeroCallMe() {
               aria-labelledby="call-me-title"
               aria-describedby="call-me-description"
               onKeyDown={handleDialogKeyDown}
-              className={`relative z-10 w-full max-w-md overflow-hidden rounded-3xl border border-cyan-200/15 bg-[#0b1220]/95 p-7 shadow-[0_24px_100px_rgba(0,0,0,0.65),0_0_60px_rgba(34,211,238,0.10)] backdrop-blur-2xl transition duration-200 ease-out motion-reduce:transition-none sm:p-9 ${
-                isOpen
+              className={`relative z-10 w-full max-w-md overflow-hidden rounded-3xl border border-cyan-200/15 bg-[#0b1220]/95 p-7 shadow-[0_24px_100px_rgba(0,0,0,0.65),0_0_60px_rgba(34,211,238,0.10)] backdrop-blur-2xl transition duration-200 ease-out motion-reduce:transition-none sm:p-9 ${isOpen
                   ? "translate-y-0 scale-100 opacity-100"
                   : "translate-y-3 scale-[0.97] opacity-0"
-              }`}
+                }`}
             >
               <div
                 aria-hidden="true"
