@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import type { PortfolioProject } from "../project-data";
 import ProjectArtwork from "./project-artwork";
@@ -24,48 +25,69 @@ function ProjectMediaGallery({ project }: ProjectDetailProps) {
         </p>
       </div>
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        {project.mediaItems.map((item, index) => (
-          <div
-            key={item}
-            className="group relative flex aspect-[4/3] flex-col items-center justify-center overflow-hidden rounded-2xl border border-dashed border-cyan-200/20 bg-slate-900/35 p-6 text-center"
-          >
+        {project.mediaItems.map((item, index) =>
+          typeof item === "string" ? (
             <div
-              aria-hidden="true"
-              className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(34,211,238,0.07),transparent_58%)] opacity-70 transition-opacity group-hover:opacity-100"
-            />
-            <svg
-              aria-hidden="true"
-              viewBox="0 0 48 48"
-              className="relative h-10 w-10 text-cyan-200/60"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
+              key={item}
+              className="group relative flex aspect-[4/3] flex-col items-center justify-center overflow-hidden rounded-2xl border border-dashed border-cyan-200/20 bg-slate-900/35 p-6 text-center"
             >
-              <rect
-                x="6"
-                y="9"
-                width="36"
-                height="30"
-                rx="4"
-                stroke="currentColor"
-                strokeWidth="1.5"
+              <div
+                aria-hidden="true"
+                className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(34,211,238,0.07),transparent_58%)] opacity-70 transition-opacity group-hover:opacity-100"
               />
-              <circle cx="17" cy="19" r="3" stroke="currentColor" strokeWidth="1.5" />
-              <path
-                d="M8 33L19 24L26 30L31 26L40 34"
-                stroke="currentColor"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
+              <svg
+                aria-hidden="true"
+                viewBox="0 0 48 48"
+                className="relative h-10 w-10 text-cyan-200/60"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  x="6"
+                  y="9"
+                  width="36"
+                  height="30"
+                  rx="4"
+                  stroke="currentColor"
+                  strokeWidth="1.5"
+                />
+                <circle
+                  cx="17"
+                  cy="19"
+                  r="3"
+                  stroke="currentColor"
+                  strokeWidth="1.5"
+                />
+                <path
+                  d="M8 33L19 24L26 30L31 26L40 34"
+                  stroke="currentColor"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+              <p className="relative mt-4 text-sm font-medium text-slate-300">
+                {item}
+              </p>
+              <span className="relative mt-2 font-mono text-[9px] uppercase tracking-[0.17em] text-slate-500">
+                Image placeholder {String(index + 1).padStart(2, "0")}
+              </span>
+            </div>
+          ) : (
+            <div
+              key={item.src}
+              className="relative aspect-video overflow-hidden rounded-2xl border border-cyan-200/20 bg-slate-900/35"
+            >
+              <Image
+                src={item.src}
+                alt={item.alt}
+                fill
+                sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                className="object-contain"
               />
-            </svg>
-            <p className="relative mt-4 text-sm font-medium text-slate-300">
-              {item}
-            </p>
-            <span className="relative mt-2 font-mono text-[9px] uppercase tracking-[0.17em] text-slate-500">
-              Image placeholder {String(index + 1).padStart(2, "0")}
-            </span>
-          </div>
-        ))}
+            </div>
+          ),
+        )}
       </div>
     </section>
   );

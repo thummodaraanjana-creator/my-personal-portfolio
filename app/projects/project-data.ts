@@ -10,6 +10,11 @@ export interface ProjectFeatureGroup {
   items: string[];
 }
 
+export interface ProjectMediaImage {
+  src: string;
+  alt: string;
+}
+
 export interface PortfolioProject {
   slug: string;
   title: string;
@@ -27,7 +32,7 @@ export interface PortfolioProject {
   technologyNote?: string;
   mediaHeading: string;
   mediaDescription: string;
-  mediaItems: string[];
+  mediaItems: Array<string | ProjectMediaImage>;
   hasRepositoryPlaceholder?: boolean;
 }
 
@@ -94,8 +99,29 @@ export const projects: PortfolioProject[] = [
     ],
     mediaHeading: "Gameplay screenshots",
     mediaDescription:
-      "Gameplay screenshots can be added as development continues. These frames are placeholders, not captured gameplay.",
-    mediaItems: ["Player controls", "Laser mechanic", "Gameplay view"],
+      "Screenshots from the completed Space Shooter 2D game, including its main menu and in-game action.",
+    mediaItems: [
+      {
+        src: "/images/projects/space-shooter-1.png",
+        alt: "Space Shooter 2D main menu with Play and Quit buttons over a starfield and spacecraft.",
+      },
+      {
+        src: "/images/projects/space-shooter-2.png",
+        alt: "Player spacecraft facing a large explosion during gameplay, with the score and shield indicator visible.",
+      },
+      {
+        src: "/images/projects/space-shooter-3.png",
+        alt: "Player spacecraft beneath a bright explosion in the starfield, with the score displayed.",
+      },
+      {
+        src: "/images/projects/space-shooter-4.png",
+        alt: "Game over screen with Restart and Main Menu buttons over an explosion-filled space battle.",
+      },
+      {
+        src: "/images/projects/space-shooter-5.png",
+        alt: "Player spacecraft launching with bright rocket exhaust against a starfield, with the score displayed.",
+      },
+    ],
     hasRepositoryPlaceholder: true,
   },
   {

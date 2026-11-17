@@ -53,19 +53,17 @@ export default function ProjectsSection() {
                     {project.category}
                   </span>
                   <span
-                    className={`inline-flex items-center gap-2 rounded-full border px-2.5 py-1 text-[10px] font-medium ${
-                      project.status === "Completed"
+                    className={`inline-flex items-center gap-2 rounded-full border px-2.5 py-1 text-[10px] font-medium ${project.status === "Completed"
                         ? "border-emerald-300/20 bg-emerald-300/[0.07] text-emerald-200"
                         : "border-amber-300/20 bg-amber-300/[0.07] text-amber-100"
-                    }`}
+                      }`}
                   >
                     <span
                       aria-hidden="true"
-                      className={`h-1.5 w-1.5 rounded-full ${
-                        project.status === "Completed"
+                      className={`h-1.5 w-1.5 rounded-full ${project.status === "Completed"
                           ? "bg-emerald-300"
                           : "bg-amber-300"
-                      }`}
+                        }`}
                     />
                     {project.status}
                   </span>
