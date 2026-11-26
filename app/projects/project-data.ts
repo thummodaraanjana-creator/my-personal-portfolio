@@ -3,7 +3,8 @@ export type ProjectArtworkType =
   | "microgreen"
   | "space-shooter"
   | "business-guidance"
-  | "breakout";
+  | "arkanoid"
+  | "sky-bounce";
 
 export interface ProjectFeatureGroup {
   title: string;
@@ -33,6 +34,7 @@ export interface PortfolioProject {
   mediaHeading: string;
   mediaDescription: string;
   mediaItems: Array<string | ProjectMediaImage>;
+  repositoryUrl?: string;
   hasRepositoryPlaceholder?: boolean;
 }
 
@@ -177,42 +179,69 @@ export const projects: PortfolioProject[] = [
     hasRepositoryPlaceholder: true,
   },
   {
-    slug: "breakout",
-    title: "Breakout",
+    slug: "arkanoid",
+    title: "Arkanoid",
     category: "Game Development",
-    status: "In Progress",
+    status: "Completed",
     description:
-      "A 2D arcade-style Breakout game currently under development using Unity and C#. Inspired by classic brick-breaking arcade games, the project focuses on implementing interactive gameplay mechanics.",
-    technologies: ["Unity 2D", "C#", "Visual Studio"],
-    artwork: "breakout",
+      "A completed 2D brick-breaking arcade game built with Unity 2D and C#, featuring four playable levels, power-ups, score tracking, and a lives system.",
+    technologies: ["Unity 2D", "C#"],
+    artwork: "arkanoid",
     overview:
-      "Breakout is a personal game development project inspired by classic Arkanoid and Breakout games. I am developing it using Unity and C#, exploring 2D physics, player controls, collision detection, and gameplay mechanics.",
+      "Arkanoid is a completed 2D brick-breaking arcade game developed using Unity 2D and C#. It includes four playable levels, Extra Life and Triple Ball power-ups, a score system, and a lives system.",
     problem:
-      "This is a personal learning project focused on understanding and practising 2D game development concepts using Unity.",
+      "This game development project focuses on building a 2D brick-breaking arcade game.",
     objective:
-      "Develop a playable 2D Breakout game while improving my knowledge of Unity game development, physics, collision detection, and gameplay programming.",
+      "Complete a brick-breaking game with four playable levels, power-ups, score tracking, and a lives system.",
     contributions: [
-      "Created and configured the Unity 2D project.",
-      "Imported and organized game assets.",
-      "Set up the game environment.",
-      "Started implementing player controls and paddle movement.",
-      "Working towards implementing ball movement and bouncing mechanics.",
-      "Planning brick destruction and core gameplay interactions.",
+      "Developed four playable levels.",
+      "Added Extra Life and Triple Ball power-ups.",
+      "Implemented score and lives systems.",
+      "Created brick-breaking gameplay.",
     ],
     featureGroups: [
       {
-        title: "Development Progress",
+        title: "Confirmed features",
         items: [
-          "Unity 2D project setup",
-          "Game asset integration",
-          "Player and paddle controller development",
-          "Core gameplay mechanics under development",
+          "Four playable levels",
+          "Extra Life power-up",
+          "Triple Ball power-up",
+          "Score system",
+          "Lives system",
+          "Brick-breaking gameplay",
         ],
       },
     ],
-    mediaHeading: "Gameplay Screenshots",
+    mediaHeading: "Project media",
     mediaDescription:
-      "Gameplay screenshots and development progress will be added as the game continues to develop.",
-    mediaItems: ["Game environment", "Player paddle", "Gameplay progress"],
+      "No project screenshots have been provided yet.",
+    mediaItems: [],
+    repositoryUrl:
+      "https://github.com/thummodaraanjana-creator/Brake-Out-Game",
+  },
+  {
+    slug: "sky-bounce",
+    title: "Sky Bounce",
+    category: "Game Development",
+    status: "In Progress",
+    description:
+      "A 2D arcade game inspired by Flappy Bird, currently in development using Unity 2D and C#.",
+    technologies: ["Unity 2D", "C#"],
+    artwork: "sky-bounce",
+    overview:
+      "Sky Bounce is an in-progress 2D arcade game inspired by Flappy Bird, developed using Unity 2D and C#.",
+    problem:
+      "This project is a 2D arcade game inspired by Flappy Bird.",
+    objective:
+      "Develop Sky Bounce as a 2D arcade game using Unity 2D and C#.",
+    contributions: [
+      "Developing a 2D arcade game inspired by Flappy Bird.",
+    ],
+    featureGroups: [],
+    mediaHeading: "Project media",
+    mediaDescription:
+      "No project screenshots have been provided yet.",
+    mediaItems: [],
+    repositoryUrl: "https://github.com/thummodaraanjana-creator/Sky-Bounce",
   },
 ];

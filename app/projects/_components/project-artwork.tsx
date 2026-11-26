@@ -86,7 +86,7 @@ function SpaceShooterArtwork() {
   );
 }
 
-function BreakoutArtwork() {
+function ArkanoidArtwork() {
   return (
     <svg
       aria-hidden="true"
@@ -122,6 +122,40 @@ function BreakoutArtwork() {
       <circle cx="319" cy="242" r="8" fill="url(#breakout-ball)" />
       <rect x="263" y="273" width="114" height="12" rx="6" fill="#67E8F9" />
       <path d="M147 299H493" stroke="#67E8F9" strokeOpacity=".16" />
+    </svg>
+  );
+}
+
+function SkyBounceArtwork() {
+  return (
+    <svg
+      aria-hidden="true"
+      viewBox="0 0 640 360"
+      className="h-full w-full"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <defs>
+        <linearGradient id="sky-bounce-bg" x1="120" y1="0" x2="520" y2="360">
+          <stop stopColor="#102D4A" />
+          <stop offset="1" stopColor="#090D1A" />
+        </linearGradient>
+        <linearGradient id="sky-bounce-orb" x1="274" y1="135" x2="329" y2="190">
+          <stop stopColor="#A5F3FC" />
+          <stop offset="1" stopColor="#3B82F6" />
+        </linearGradient>
+      </defs>
+      <rect width="640" height="360" fill="url(#sky-bounce-bg)" />
+      <circle cx="500" cy="82" r="118" fill="#3B82F6" fillOpacity=".1" />
+      <circle cx="139" cy="250" r="92" fill="#06B6D4" fillOpacity=".07" />
+      <path d="M0 278C98 258 173 293 261 272C350 251 445 284 640 255V360H0V278Z" fill="#0B1728" />
+      <path d="M0 278C98 258 173 293 261 272C350 251 445 284 640 255" stroke="#67E8F9" strokeOpacity=".2" />
+      <circle cx="302" cy="165" r="29" fill="url(#sky-bounce-orb)" />
+      <circle cx="292" cy="155" r="8" fill="white" fillOpacity=".35" />
+      <path d="M103 115H171M469 178H526M378 78H426" stroke="#A5F3FC" strokeOpacity=".22" strokeLinecap="round" />
+      <circle cx="178" cy="83" r="2" fill="#A5F3FC" fillOpacity=".7" />
+      <circle cx="461" cy="112" r="2" fill="#A5F3FC" fillOpacity=".6" />
+      <circle cx="533" cy="224" r="2" fill="#A5F3FC" fillOpacity=".55" />
     </svg>
   );
 }
@@ -182,7 +216,8 @@ export default function ProjectArtwork({ type, title }: ProjectArtworkProps) {
       <div className="absolute inset-0 transition-transform duration-500 group-hover:scale-[1.03]">
         {type === "microgreen" && <MicrogreenArtwork />}
         {type === "space-shooter" && <SpaceShooterArtwork />}
-        {type === "breakout" && <BreakoutArtwork />}
+        {type === "arkanoid" && <ArkanoidArtwork />}
+        {type === "sky-bounce" && <SkyBounceArtwork />}
         {type === "business-guidance" && <BusinessGuidanceArtwork />}
       </div>
       <div

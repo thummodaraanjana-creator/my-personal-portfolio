@@ -167,7 +167,29 @@ export default function ProjectDetail({ project }: ProjectDetailProps) {
                 {project.overview}
               </p>
 
-              {project.hasRepositoryPlaceholder && (
+              {project.repositoryUrl ? (
+                <a
+                  href={project.repositoryUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="mt-7 inline-flex items-center gap-3 rounded-xl border border-white/10 bg-white/[0.035] px-4 py-3 transition-colors hover:border-cyan-200/30 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-300"
+                >
+                  <span
+                    aria-hidden="true"
+                    className="font-mono text-sm text-cyan-200"
+                  >
+                    &lt;/&gt;
+                  </span>
+                  <span>
+                    <span className="block text-xs font-semibold text-slate-200">
+                      GitHub repository
+                    </span>
+                    <span className="mt-0.5 block text-[11px] text-slate-500">
+                      View source code
+                    </span>
+                  </span>
+                </a>
+              ) : project.hasRepositoryPlaceholder ? (
                 <div className="mt-7 inline-flex items-center gap-3 rounded-xl border border-white/10 bg-white/[0.035] px-4 py-3">
                   <span
                     aria-hidden="true"
@@ -184,7 +206,7 @@ export default function ProjectDetail({ project }: ProjectDetailProps) {
                     </span>
                   </span>
                 </div>
-              )}
+              ) : null}
             </div>
 
             <div className="overflow-hidden rounded-3xl border border-white/10 shadow-[0_24px_90px_rgba(0,0,0,0.35)]">

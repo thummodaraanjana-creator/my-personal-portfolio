@@ -35,7 +35,7 @@ export default function ProjectsSection() {
             </p>
           </div>
           <span className="w-fit rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 font-mono text-xs tracking-wide text-slate-400">
-            03 PROJECTS
+            {String(projects.length).padStart(2, "0")} PROJECTS
           </span>
         </div>
 
